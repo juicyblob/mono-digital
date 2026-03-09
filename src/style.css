@@ -31,9 +31,22 @@ body {
 }
 
 .social-link {
-  @apply flex justify-center items-center w-4.5 h-4.5 sm:w-6.5 sm:h-6.5 border border-(--color-gray) rounded-full no-underline;
+  @apply flex justify-center items-center w-6.5 h-6.5 border border-(--color-gray) rounded-full no-underline;
+}
+
+.hero {
+  background: linear-gradient(79.11deg, #101010 30.3%, rgba(16, 16, 16, 0) 58.09%, #101010 89.75%), 
+  url('./assets/images/grid-pattern.svg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 192px 192px;
+  background-position: center, top right;
+
+  @media (max-width: 639px) {
+    background: linear-gradient(186.27deg, #101010 54.47%, rgba(16, 16, 16, 0) 75.14%, #101010 85.99%),
+    url('./assets/images/grid-pattern.svg');
+  }
 }
 
 .btn {
-  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.9375rem]/[1] font-medium;
+  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.875rem]/[1] sm:text-[0.9375rem]/[1] font-medium text-center whitespace-nowrap;
 }
