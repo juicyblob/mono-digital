@@ -67,3 +67,37 @@ body {
 .slider-btn {
   @apply flex px-10 py-2.5 border border-(--color-gray) justify-center items-center gap-2 text-[0.875rem]/[1.4] font-medium whitespace-nowrap sm:px-6 lg:text-[0.9375rem]/[1.4];
 }
+
+.projects-slider {
+  margin-left: calc((100vw - 1208px) / 2);
+}
+
+.swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to left, #101010 0%, rgba(16, 16, 16, 0) 100%);
+}
+
+@media (max-width: 1023px) {
+  .swiper::after {
+    display: none;
+  }
+
+  .projects-slider {
+    margin-left: 0;
+    max-width: 1288px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 639px) {
+  .projects-slider {
+    padding: 0 24px;
+  }
+}
