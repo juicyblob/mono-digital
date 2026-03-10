@@ -8,6 +8,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'GeistMono';
+  src: url('./assets/fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-white: #EBEBEB;
   --color-soft: #9D9595;
@@ -16,6 +24,7 @@
   --color-line: #242222;
   --color-deep-dark: #100F0F;
   --font-family: "Inter", sans-serif;
+  --font-geist: "GeistMono", sans-serif;
   --line-height: 1.3;
 }
 
@@ -34,16 +43,20 @@ body {
   @apply flex justify-center items-center w-6.5 h-6.5 border border-(--color-gray) rounded-full no-underline;
 }
 
+.num {
+  @apply font-(family-name:--font-geist) text-[0.875rem]/[1] tracking-[2%] text-(--color-gray) absolute top-4 left-4 sm:left-5.5 lg:text-base/[1] lg:left-7.5 lg:top-6;
+}
+
 .hero {
-  background: linear-gradient(79.11deg, #101010 30.3%, rgba(16, 16, 16, 0) 58.09%, #101010 89.75%), 
-  url('./assets/images/grid-pattern.svg');
+  background: linear-gradient(79.11deg, #101010 30.3%, rgba(16, 16, 16, 0) 58.09%, #101010 89.75%),
+    url('./assets/images/grid-pattern.svg');
   background-repeat: no-repeat, repeat;
   background-size: cover, 192px 192px;
   background-position: center, top right;
 
   @media (max-width: 639px) {
     background: linear-gradient(186.27deg, #101010 54.47%, rgba(16, 16, 16, 0) 75.14%, #101010 85.99%),
-    url('./assets/images/grid-pattern.svg');
+      url('./assets/images/grid-pattern.svg');
   }
 }
 
