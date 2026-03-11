@@ -69,7 +69,7 @@ body {
 }
 
 .projects-slider {
-  margin-left: calc((100vw - 1208px) / 2);
+  margin-left: max(calc((100vw - 1222px) / 2), 40px);
 }
 
 .swiper::after {
