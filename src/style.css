@@ -28,11 +28,16 @@
   --line-height: 1.3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 1rem;
   color: var(--color-white);
   line-height: var(--line-height);
+  background-color: var(--color-dark);
 }
 
 .wrapper {
@@ -40,7 +45,12 @@ body {
 }
 
 .social-link {
-  @apply flex justify-center items-center w-6.5 h-6.5 border border-(--color-gray) rounded-full no-underline;
+  @apply flex justify-center items-center w-6.5 h-6.5 border border-(--color-gray) rounded-full no-underline transition duration-200 ease-in lg:hover:border-(--color-soft);
+}
+
+.social-link svg {
+  fill: var(--color-white);
+  transition: all .2s ease-in;
 }
 
 .num {
@@ -61,11 +71,11 @@ body {
 }
 
 .btn {
-  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.875rem]/[1] sm:text-[0.9375rem]/[1] font-medium text-center whitespace-nowrap;
+  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.875rem]/[1] sm:text-[0.9375rem]/[1] font-medium text-center whitespace-nowrap transition duration-300 lg:hover:border-(--color-soft) ease-in;
 }
 
 .slider-btn {
-  @apply flex px-10 py-2.5 border border-(--color-gray) justify-center items-center gap-2 text-[0.875rem]/[1.4] font-medium whitespace-nowrap sm:px-6 lg:text-[0.9375rem]/[1.4];
+  @apply flex px-10 py-2.5 border border-(--color-gray) justify-center items-center gap-2 text-[0.875rem]/[1.4] font-medium whitespace-nowrap sm:px-6 lg:text-[0.9375rem]/[1.4] transition duration-300 lg:hover:border-(--color-soft) ease-in;
 }
 
 .projects-slider {
