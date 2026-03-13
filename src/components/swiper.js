@@ -18,7 +18,7 @@ const swiper = new Swiper('.swiper', {
             playActiveVideo(this);
         },
 
-        slideChange: function () {
+        slideChangeTransitionEnd: function () {
             pauseAllVideos();
             playActiveVideo(this);
         }

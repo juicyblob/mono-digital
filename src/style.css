@@ -71,14 +71,15 @@ body {
 }
 
 .btn {
-  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.875rem]/[1] sm:text-[0.9375rem]/[1] font-medium text-center whitespace-nowrap transition duration-300 lg:hover:border-(--color-soft) ease-in;
+  @apply inline-block px-10 py-3 border border-(--color-gray) text-[0.875rem]/[1] sm:text-[0.9375rem]/[1] font-medium text-center whitespace-nowrap select-none transition duration-300 lg:hover:border-(--color-soft) ease-in;
 }
 
 .slider-btn {
-  @apply flex px-10 py-2.5 border border-(--color-gray) justify-center items-center gap-2 text-[0.875rem]/[1.4] font-medium whitespace-nowrap sm:px-6 lg:text-[0.9375rem]/[1.4] transition duration-300 lg:hover:border-(--color-soft) ease-in;
+  @apply flex px-10 py-2.5 border border-(--color-gray) justify-center items-center gap-2 text-[0.875rem]/[1.4] font-medium whitespace-nowrap select-none sm:px-6 lg:text-[0.9375rem]/[1.4] transition duration-300 lg:hover:border-(--color-soft) ease-in;
 }
 
 .projects-slider {
+  user-select: none;
   margin-left: max(calc((100vw - 1222px) / 2), 40px);
 }
 
