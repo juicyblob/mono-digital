@@ -13,5 +13,31 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-btn-next',
         prevEl: '.swiper-btn-prev',
     },
+    on: {
+        init: function () {
+            playActiveVideo(this);
+        },
+
+        slideChange: function () {
+            pauseAllVideos();
+            playActiveVideo(this);
+        }
+    }
 });
+
+function pauseAllVideos() {
+    document.querySelectorAll('.swiper video').forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+    });
+}
+
+function playActiveVideo(swiper) {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const video = activeSlide.querySelector('video');
+
+    if (video) {
+        video.play().catch(() => { });
+    }
+}
 
