@@ -27,7 +27,7 @@
 
 ## 🌐 Live Demo
 
-👉 http://mono-digital.ru/
+👉 https://mono-digital.ru/
 
 ## 📦 Возможности
 
